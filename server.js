@@ -12,7 +12,7 @@ const cache = new NodeCache({ stdTTL: 600 });
 // Enable CORS for all routes
 app.use(cors());
 
-app.get('/data/events', async (req, res) => {
+app.get('/events', async (req, res) => {
   try {
     // Check if the data is in the cache
     const cachedData = cache.get('vatsimEvents');
