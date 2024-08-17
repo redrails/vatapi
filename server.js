@@ -23,6 +23,7 @@ app.get('/data/events', async (req, res) => {
 
     const response = await axios.get('https://my.vatsim.net/api/v2/events/latest');
     const data = response.data;
+    console.log("CACHE: Not hit this time, contacting Vatsim API")
 
     cache.set('vatsimEvents', data);
 
